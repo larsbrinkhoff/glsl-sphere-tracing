@@ -12,3 +12,4 @@ void set_uniform4f(unsigned int prog, const char *name, float v1, float v2, floa
 void set_uniform1i(unsigned int prog, const char *name, int val);
 
 #endif	/* _UTIL_H_ */
+
