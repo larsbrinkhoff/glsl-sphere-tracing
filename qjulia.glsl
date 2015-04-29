@@ -1,3 +1,5 @@
+#version 130
+
 const vec2 resolution = vec2(800.0, 600.0);
 const int max_iter = 10;
 const float bailout = 4.0;
@@ -132,7 +134,7 @@ float jinteresct(in vec3 rO, in vec3 rD, out float ao, out vec3 normal)
 #elif 1
 	// supersphere
 	float k = 10.0;
-	vec3 pk = pow(abs(p), k);
+	vec3 pk = pow(abs(p), vec3(k));
 	dist = pow(pk.x + pk.y + pk.z, 1.0/k) - 0.8;
         #define COMPUTE_NORMAL normal = pk / p
 #elif 0
@@ -192,7 +194,7 @@ float jinteresct(in vec3 rO, in vec3 rD, out float ao, out vec3 normal)
 
 vec3 trace(vec3 pos, vec3 dir)
 {
-    vec3 color = 0.0;
+    vec3 color = vec3(0.0);
     vec3 w = vec3(1.0);
 
     for (int i = 0; i < 10; i++) {
@@ -230,7 +232,7 @@ vec3 trace(vec3 pos, vec3 dir)
 	if (t2 > 0.0) {
             vec3 p = pos + t2*dir*.99;
 	    p = rotate (p, rotate_xz(-0.2 * time));
-            color = .5 * smoothstep(sin(p.x / 30.0) * sin(p.z / 30.0), 0.0, 1.0) + .5;
+            color = vec3(.5 * smoothstep(sin(p.x / 30.0) * sin(p.z / 30.0), 0.0, 1.0) + .5);
 	} else {
             //color = vec3(0.5,0.51,0.52)+vec3(0.5,0.47,0.45)*p.y;
             color = vec3(0.5,0.51,0.52)+vec3(0.5,0.47,0.45)*dir.y;

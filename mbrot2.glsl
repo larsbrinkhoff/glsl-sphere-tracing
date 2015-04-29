@@ -1,3 +1,5 @@
+#version 130
+
 uniform sampler1D tex;
 uniform vec2 center;
 uniform float scale;
@@ -44,7 +46,7 @@ void main() {
 	c.x *= 1.3333;
 
 	int max_iter = int(7.0 * pow(10.0, float(iter) / 70.0));
-	vec4 color = 0;
+	vec4 color = vec4(0);
 	for (int i = 0; i < n; i++) {
 		c.y = (gl_TexCoord[0].y - 0.5) * scale - center.y;
 		for (int j = 0; j < n; j++) {

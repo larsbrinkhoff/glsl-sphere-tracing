@@ -1,3 +1,5 @@
+#version 130
+
 uniform sampler1D tex;
 uniform vec2 c;
 uniform int iter;
