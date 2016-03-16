@@ -18,8 +18,6 @@ int iter = 70;
 const float zoom_factor = 0.025;
 
 int main(int argc, char **argv) {
-	void *img;
-	
 	/* initialize glut */
 	glutInitWindowSize(800, 600);
 	
@@ -32,20 +30,6 @@ int main(int argc, char **argv) {
 	glutKeyboardFunc(key_handler);
 	glutMouseFunc(bn_handler);
 	glutMotionFunc(mouse_handler);
-
-	/* load the 1D palette texture */
-	glBindTexture(GL_TEXTURE_1D, 1);
-	glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-	glTexParameteri(GL_TEXTURE_1D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	
-	if(!(img = load_image("pal.ppm", 0, 0))) {
-		return EXIT_FAILURE;
-	}
-	glTexImage1D(GL_TEXTURE_1D, 0, 4, 256, 0, GL_BGRA, GL_UNSIGNED_BYTE, img);
-	free(img);
-
-	glEnable(GL_TEXTURE_1D);
 
 	/* load and set the mandelbrot shader */
 	if(!(prog = setup_shader("qjulia.glsl"))) {
