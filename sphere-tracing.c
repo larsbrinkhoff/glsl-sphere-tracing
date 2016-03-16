@@ -32,7 +32,7 @@ int main(int argc, char **argv) {
 	glutMotionFunc(mouse_handler);
 
 	/* load and set the mandelbrot shader */
-	if(!(prog = setup_shader("qjulia.glsl"))) {
+	if(!(prog = setup_shader("sphere-tracing.glsl"))) {
 		return EXIT_FAILURE;
 	}
 	set_uniform1i(prog, "iter", iter);
