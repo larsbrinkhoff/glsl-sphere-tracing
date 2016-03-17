@@ -5,7 +5,7 @@ LDFLAGS = -L/usr/lib64/nvidia -L/usr/X11R6/lib -lGL -lGLU -lglut -lm
 .PHONY: all
 all: sphere-tracing
 
-sphere-tracing: sphere-tracing.o sdr.o
+sphere-tracing: sphere-tracing.o util.o
 	$(CC) -o $@ $^ $(LDFLAGS)
 
 .PHONY: clean

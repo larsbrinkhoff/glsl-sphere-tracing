@@ -14,8 +14,6 @@ void glGetInfoLogARB(GLhandleARB, GLsizei, GLsizei*, GLcharARB*);
 void glGetObjectParameterivARB(GLhandleARB, GLenum, int*);
 GLint glGetUniformLocationARB(GLhandleARB, const char*);
 void glUniform1f(GLint location, GLfloat v0);
-void glUniform1i(GLint location, GLint v0);
-void glUniform2f(GLint location, GLfloat v0, GLfloat v1);
 #endif
 
 unsigned int setup_shader(const char *fname) {
@@ -78,26 +76,5 @@ void set_uniform1f(unsigned int prog, const char *name, float val) {
 	int loc = glGetUniformLocationARB(prog, name);
 	if(loc != -1) {
 		glUniform1f(loc, val);
-	}
-}
-
-void set_uniform2f(unsigned int prog, const char *name, float v1, float v2) {
-	int loc = glGetUniformLocationARB(prog, name);
-	if(loc != -1) {
-		glUniform2f(loc, v1, v2);
-	}
-}
-
-void set_uniform4f(unsigned int prog, const char *name, float v1, float v2, float v3, float v4) {
-	int loc = glGetUniformLocationARB(prog, name);
-	if(loc != -1) {
-		glUniform4f(loc, v1, v2);
-	}
-}
-
-void set_uniform1i(unsigned int prog, const char *name, int val) {
-	int loc = glGetUniformLocationARB(prog, name);
-	if(loc != -1) {
-		glUniform1i(loc, val);
 	}
 }
