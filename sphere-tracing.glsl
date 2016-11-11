@@ -1,4 +1,6 @@
-#version 130
+#version 100
+
+precision mediump float;
 
 const vec2 resolution = vec2(800.0, 600.0);
 const int max_iter = 10;
@@ -289,7 +291,7 @@ mat4 inverse (mat4 a)
 
 void main(void)
 {
-    vec2 p = vec2(8.0/5,6.0/5) * (gl_FragCoord.xy / resolution.xy - .5);
+    vec2 p = vec2(8.0/5.0,6.0/5.0) * (gl_FragCoord.xy / resolution.xy - .5);
     //cccc = vec4( .7*cos(.5*time), .7*sin(.3*time), .7*cos(1.0*time), .7*cos(2.0*time) );
     cccc = vec4( .7*cos(2.5*time), .7*sin(1.3*time), 0.0, 0.0);
     vec3 edir = normalize(vec3(p,1.0));

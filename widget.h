@@ -27,6 +27,7 @@ protected:
     virtual void keyPressEvent(QKeyEvent *);
 
 private:
+    GLuint vbo[2];
     QTime elapsed;
     QBasicTimer *timer;
     QGLShaderProgram *program;

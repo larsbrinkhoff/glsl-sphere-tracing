@@ -1,7 +1,7 @@
 MOC = qtchooser -run-tool=moc -qt=5
 CXXFLAGS = -std=c++11 -pedantic -Wall -fPIC
-CPPFLAGS = `pkg-config --cflags Qt5OpenGL`
-LDFLAGS = -lGL `pkg-config --libs Qt5OpenGL`
+CPPFLAGS = `pkg-config --cflags Qt5OpenGL glesv2`
+LDFLAGS = `pkg-config --libs Qt5OpenGL glesv2`
 
 .PHONY: all
 all: sphere-tracing
