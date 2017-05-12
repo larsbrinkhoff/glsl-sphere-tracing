@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/home/lars/StudioProjects/HelloGL2/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5eba68caf704ce427d52c38449af91d24917663">
+        <dex dex="/home/lars/StudioProjects/HelloGL2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d364e684c220656266d5cb21afd342d92e830692/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lars/StudioProjects/glsl-sphere-tracing/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/lars/StudioProjects/glsl-sphere-tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_56b24bf0b475f9891dea877a1b491cf8f4fb4de6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lars/StudioProjects/HelloGL2/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/lars/StudioProjects/HelloGL2/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_93601058cee7a7a0a018fd4d1656bb4ed8818d51/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/lars/StudioProjects/glsl-sphere-tracing/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e04650af1db731daa4cb65c6dfc3a5fefd6460bb">
+        <dex dex="/home/lars/StudioProjects/glsl-sphere-tracing/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b80532dbf9356eb0fe263145df0a55137523a74c/classes.dex" />
+    </item>
+
+</items>

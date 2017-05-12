@@ -1,3 +1,5 @@
-sphere-tracing
-*.o
 *~
+/.gradle/3.3/taskArtifacts
+/app/build/intermediates
+/app/.externalNativeBuild
+/build/android-profile
